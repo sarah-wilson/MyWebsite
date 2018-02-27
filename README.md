@@ -69,3 +69,14 @@ Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework 
 ## Copyright and License
 
 Copyright 2013-2017 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-clean-blog/blob/gh-pages/LICENSE) license.
+
+## Notes
+Gulp to update and compress code
+firebase deploy to push changes
+git commit add .
+commit -am
+push
+
+sarah
+hockey
+research
