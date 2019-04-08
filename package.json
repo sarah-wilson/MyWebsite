@@ -28,7 +28,8 @@
     "dependencies": {
         "bootstrap": "4.0.0",
         "font-awesome": "4.7.0",
-        "jquery": "3.3.0"
+        "jquery": "3.3.0",
+        "npm": "^6.9.0"
     },
     "devDependencies": {
         "browser-sync": "2.23.5",

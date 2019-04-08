@@ -73,9 +73,9 @@ Copyright 2013-2017 Blackrock Digital LLC. Code released under the [MIT](https:/
 ## Notes
 Gulp to update and compress code
 firebase deploy to push changes
-git commit add .
-commit -am
-push
+git add .
+git commit -m "X"
+git push
 
 sarah
 hockey
