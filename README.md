@@ -70,7 +70,16 @@ Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework 
 
 Copyright 2013-2017 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-clean-blog/blob/gh-pages/LICENSE) license.
 
-## Notes
+## 
+node.js website and install
+https://firebase.google.com/docs/cli/ 
+
+npm install -g firebase-tools (can be run in anywhere as it is global)
+
+While in the project folder npm i gulp
+
+Found lots of vulnerabilities - run npm audit fix 
+
 Gulp to update and compress code
 firebase deploy to push changes
 git add .
