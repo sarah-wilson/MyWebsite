@@ -8,8 +8,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hi, I'm Sarah!</title>
-
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -39,7 +37,7 @@
               <a class="nav-link" href="about.html">About this Site</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="tracker2019.html">Trip Tracker</a>
+              <a class="nav-link" href="tracker.html">Trip Tracker</a>
             </li>
           </ul>
         </div>
@@ -54,7 +52,7 @@
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="post-heading">
               <h1>Trip Tracker!</h1>
-              <h2 class="subheading">Making it better</h2>
+              <h2 class="subheading">On track for improvment</h2>
               <span class="meta">Posted by
                 <a href="#">Sarah Wilson</a>
                 on 19th April 2020</span>
@@ -70,9 +68,9 @@
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
                      
-            <h2 class="section-heading">Trip Tracker 2019 - making it better</h2>
+            <h2 class="section-heading">Trip Tracker - On track for improvement</h2>
 
-            <p>This is a follow on article about how I improved this project. If you want to read how it was made then check this out <a class="nav-link" href="tracker2018.html">Trip Tracker - behind the scenes </a></p>
+            <p>This is a follow on article about how I improved this project. If you want to read how it was made then check this out <a class="nav-link" href="tracker2018.html">Trip Tracker - the start of the voyage </a></p>
             <p>As a recap, I know my camera captures GPS data on my photos and I know if I google this, google maps can show me where the photo was taken. <p><img src='img/get_gps.png' width="100%" height="100%" alt="Example GPS"></p>
             <p>After a bit of a struggle, in September 2018 I end up with something that looks like this:</p>
             <figure>
@@ -82,9 +80,12 @@
             </figure>
             <p>April 2019 and it is nearly 7 months since I have looked at my code or updated this website. This causes me many issues...</p>
             <p><ul>
-              <li>I can't even remember what software I used to my write my code and I have too many options. I am just generally a bit disorentated and the documentation I left myself is not helping much.</li>
-              <li>I ended up writing the code where I stored the python packages (C:\Python27\Lib\site-packages\GPSPhoto) because it didn’t work otherwise and I wanted to get it working more than I cared about where it was stored. When I eventually run my code I can't find the new results. I am embarrassed by 2018 Sarah for being sloppy and not at least documenting this. </ul></p>
-            <p>I am still having to manually tidy up the Excel output and I have to re-learn how to set up the Tableau file but around midnight (on a work night!) I finally update this website.  
+              <li>I can't even remember what software I used to my write my code and I have several possible programs installed on this computer from experiementing over the years.</li>
+              <li>I ended up writing the code where I stored the python packages (C:\Python27\Lib\site-packages\GPSPhoto) because it didn’t work otherwise and I wanted to get it working more than I cared about where it was stored. When I eventually run my code I can't find the new results. </li>
+              <li>I am still having to manually tidy up the Excel output and I have to re-learn how to set up the Tableau file. </li> 
+              <li>I am just generally a bit disorentated and the documentation I left myself is not helping much.</li>
+              </ul></p> 
+              <p>Despite this, around midnight (on a work night!) I finally update this website. The actual visible changes are minor, so lets call it V1.1</p>  
           </div>
         </div>
       </div>
@@ -95,21 +96,21 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
-            <h2 class="section-heading">What did I do next?</h2>
-            <p>September 2019 (I apparently only code in September and April)
-            <p>5 months since I have looked at my code or updated this website. This causes me many issues...</p>
+            <h2 class="section-heading">So I've been on holiday</h2>
+            <p>September 2019 (I apparently only code in September and April) and I've returned from a lovely holiday and I want to update my tracker.
+            <p>However, it has been 5 months since I have looked at my code or updated this website. You would think I learnt from last time but I have new problems...</p>
             <p><ul>
-              <li>I have a new laptop, so everything needs setting back up from scratch. *cue pathetic whine*</li>
-              <li>I wrote my code in python 2.7 and need to upgrade it to python 3.0 because it stops being supported in a few months. I end up getting help trying to use virtual enviroments - I'll not go into it.</li>
+              <li>I have a new laptop, so everything needs setting back up from scratch. Gahhh </li>
+              <li>I wrote my code in python 2.7 and need to upgrade it to python 3.0 because it stops being supported in a few months. I end up getting help trying to use virtual enviroments because computers apparently don't like multiple versions of python on the same machine and the commands I'm using don't work in powershell- I'll not go into it.</li>
               <li>The new python version isn't compatible with some of my code packages, so just assume at least an hour disappeared into troubleshooting that.</li>
               </ul></p>
             <p>We good? Nope. Out of 1,600 new photos only 35 of them are working.</p>
             <p><img src='img/komodofail.png' width="80%" height="80%" alt="code tool"></p> 
 
-            <p>My output doesn't include the filename to try and dig deeper. So I figure out how to get file name in by reading the code packages, googling and trial and error.</p>
+            <p>It would be useful to have the filenames so I can see which ones are and are not working, but my code doesn't include it. So I figure out how to get file names by reading the code packages, googling and trial and error.</p>
             <p>The positive side of this, is that I added lots more information to my output, including a timestamp of when the photo was taken.</p>
-            <p>I find the source of my problem is the file type. My new iPhone takes High Efficiency Image Format (HEIC). Which isn't supposed by the python package that I use to extract data.</p>
-            <p>I am going to gloss over the hours of <s>suffering</s>discovery and say that I eventually got a command line tool to convert my photos and re-loaded them into a new tableau. 
+            <p>I find the source of my problem is the file type. My new iPhone takes High Efficiency Image Format (HEIC). This isn't suppoorted by the python package that I use to extract data.</p>
+            <p>I am going to gloss over the hours of <s>suffering</s> discovery and say that I eventually got a command line tool to convert my photos into a useable file type and re-loaded them into a new Tableau. All I needed was the following:
             <p><img src='img/heicyconverty.png' width="100%" height="100%" alt="code tool"></p>
             <p>I played around more in Tableau and it now looks like:</p>
             <figure>
@@ -123,13 +124,26 @@
               <figcaption><small>Flores and Komodo National park in Indonesia with lines</small>
               </figcaption>
             </figure> 
-            <p> I also tried to add thumbnail photos to the points but that is so much effort I stopped. I don't know where I will take this next. It is April 2020 now and I've created this page and fixed some security issues. My domain name expired and then a certificate ran out, so there is more effort than I imagined per year in maintaining this. It is a nice twice-a-year time sink.</p>
-            <p>I hope you enjoyed reading this.</p>
+            <p> I also tried to add thumbnail photos to the points but that is so much effort I stopped. </p>
             <figure>
               <img src='img/komodothumb.png' width="100%" height="100%" alt="map" />
               <figcaption><small>Flores and Komodo National park in Indonesia with thumbnail images</small>
               </figcaption>
             </figure> 
+            <p>I'm going to call this V2, but I don't know where I will take this next. There is a reasonable amount of effort just maintain this but it is a nice twice-a-year time sink.</p>
+            <p>For now, enjoy a timelapse:</p>
+                                  <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/zwC4qaLwuTY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p><small>Sunrise into Singapore</small></p>
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
 
         </div>
         </div>
