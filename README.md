@@ -74,18 +74,18 @@ Copyright 2013-2017 Blackrock Digital LLC. Code released under the [MIT](https:/
 node.js website and install
 https://firebase.google.com/docs/cli/ 
 
-npm install -g firebase-tools (can be run in anywhere as it is global)
-
-While in the project folder npm i gulp
-
-Found lots of vulnerabilities - run npm audit fix 
-
-Gulp to update and compress code
-firebase deploy to push changes
+Go to folder and open git bash to keep files updated.
 git add .
 git commit -m "X"
 git push
 
-sarah
-hockey
-research
+
+To push changes:
+
+While in the project folder npm i gulp
+
+Gulp to update and compress code
+firebase deploy to push changes
+
+
+npm install -g firebase-tools (can be run in anywhere as it is global)
