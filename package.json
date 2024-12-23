@@ -34,8 +34,13 @@
         "updates": "^13.1.4"
     },
     "devDependencies": {
+<<<<<<< HEAD
         "browser-sync": "^3.0.3",
         "gulp": "^5.0.0",
+=======
+        "browser-sync": "^2.27.10",
+        "gulp": "^4.0.2",
+>>>>>>> 0621165ed0393e2bba9cf51ef10c9f0458852033
         "gulp-clean-css": "^4.2.0",
         "gulp-header": "^1.8.9",
         "gulp-rename": "^1.4.0",
