@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Voice Design — an AI voice synthesis demo by Sarah Wilson. Describe a character in plain English, get a voice back.">
+    <meta name="author" content="Sarah Wilson">
+
+    <title>Voice Design | Sarah Wilson</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About this Site</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tracker.html">Trip Tracker</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/voice-waveform-1.svg'); background-color: #1c1a19; background-size: cover; background-position: center bottom;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>Voice Design</h1>
+              <span class="subheading">What should something sound like based on emotional or physical characteristics?</span>
+              <span class="meta">By <a href="about.html">Sarah Wilson</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+
+            <!-- Intro -->
+            <p class="lead">Describe a character in plain English. Get a voice back.</p>
+
+            <p>The code takes a plain-language description — e.g. "stone giant" — and generates a voice. It maps your words to acoustic properties like pitch, breathiness, and texture, drawn from my MSc dissertation which statistically analysed the voices of robots, aliens, and cartoon characters in film. The question it asked: what does fiction think non-human things should sound like? I had the research but not the technical skills to build with it at the time. I've been using Claude Code to further bring it to life.</p>
+
+            <p>Try the demo (note: it can take a while to load first time) or play the example voices below.</p>
+
+            <!-- CTA -->
+            <div class="text-center" style="margin: 2rem 0;">
+              <a href="https://huggingface.co/spaces/sarah-wilson/voice-design" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">Give it a try &rarr;</a>
+            </div>
+
+            <!-- Audio Examples -->
+            <h2 class="section-heading">Hear some examples</h2>
+
+            <p><em>"happy female ghost"</em></p>
+            <div id="waveform-1" style="cursor: pointer; margin-bottom: 0.25rem;"></div>
+            <p><small class="text-muted">Click to play / pause</small></p>
+
+            <p style="margin-top: 1.5rem;"><em>"elderly evil creature"</em></p>
+            <div id="waveform-2" style="cursor: pointer; margin-bottom: 0.25rem;"></div>
+            <p><small class="text-muted">Click to play / pause</small></p>
+
+            <p style="margin-top: 1.5rem;"><em>"small curious tree"</em></p>
+            <div id="waveform-3" style="cursor: pointer; margin-bottom: 0.25rem;"></div>
+            <p><small class="text-muted">Click to play / pause</small></p>
+
+            <!-- Written Examples -->
+            <h2 class="section-heading" style="margin-top: 2.5rem;">Some things to try</h2>
+
+            <p>The code works by matching words to acoustic traits — it's not a language model (yet), so it doesn't interpret meaning the way a person would. Descriptions that combine traits pointing in the same direction tend to produce the clearest results.</p>
+
+            <p><strong>Descriptions that work well</strong> — physical first, then personality, all pulling the same way:</p>
+
+            <blockquote class="blockquote">
+              <p>"ancient stone giant" — Deep, slow, rough-textured. Think something that has been around since before plumbing.</p>
+            </blockquote>
+            <blockquote class="blockquote">
+              <p>"warm charismatic digital assistant" — Smooth, measured, and oddly likeable. The voice your smart speaker wishes it had.</p>
+            </blockquote>
+            <blockquote class="blockquote">
+              <p>"young nervous robot" — Higher-pitched and slightly too fast. Definitely overthinking it.</p>
+            </blockquote>
+            <blockquote class="blockquote">
+              <p>"wise ancient creature" — Slow, low, unhurried. This one has seen some things.</p>
+            </blockquote>
+            <blockquote class="blockquote">
+              <p>"angry ghost" — Breathy and volatile. Not ideal for customer service, but atmospheric.</p>
+            </blockquote>
+
+            <p><strong>Descriptions that create more ambiguous results</strong> — traits competing over the same parameters. Still interesting, just less predictable:</p>
+
+            <ul>
+              <li><em>"large young"</em> — size pulls pitch down, youth pulls it back up. You'll land somewhere in the middle.</li>
+              <li><em>"warm evil"</em> — warmth and menace fight over the same acoustic quality (voice clarity). The result sits awkwardly between the two.</li>
+              <li><em>"charismatic ghost"</em> — charisma needs a clean, resonant voice; a ghost is defined by breathiness and absence. One will win.</li>
+            </ul>
+
+            <p>Stick to concrete nouns and clear adjectives. Words like <em>stone</em>, <em>metal</em>, <em>ancient</em>, <em>nervous</em>, <em>giant</em> trigger specific acoustic rules. Abstract or literary descriptions ("melancholy Victorian librarian", "the feeling of autumn") won't match anything and will fall back to the default voice. It also doesn't know how specific people sound, so asking for "Morgan Freeman" won't do much.</p>
+
+            <!-- Caveats -->
+            <h2 class="section-heading">A few honest caveats</h2>
+
+            <ul>
+              <li><strong>Cold start:</strong> First generation takes 20–40 seconds while the model loads ~1GB of weights. I haven't paid for the faster compute power.</li>
+              <li><strong>Three base voices:</strong> All output starts from one of three preset voices. It isn't generating a base voice from scratch — it is moderating a normal human voice which is male, female, or a slightly more neutral male.</li>
+              <li><strong>Keyword-based:</strong> The app matches known traits. Creative descriptions ("melancholy Victorian librarian") may fall back to defaults. A future version would use an LLM for richer interpretation.</li>
+              <li><strong>Non-deterministic:</strong> Bark produces slightly different output each run. It can also add acoustic features you didn't ask for.</li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="https://github.com/sarah-wilson">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">Copyright &copy; Sarah Wilson <script>document.write(new Date().getFullYear())</script></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts -->
+    <script src="js/clean-blog.min.js"></script>
+
+    <!-- Wavesurfer.js -->
+    <script src="https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.min.js"></script>
+    <script>
+      [
+        { id: 'waveform-1', url: 'audio/output-happyfemaleghost.wav' },
+        { id: 'waveform-2', url: 'audio/output-elderlyevilcreature.wav' },
+        { id: 'waveform-3', url: 'audio/output-smallcurioustree.wav' }
+      ].forEach(function(cfg) {
+        var ws = WaveSurfer.create({
+          container: '#' + cfg.id,
+          waveColor: '#0085A1',
+          progressColor: '#005f73',
+          url: cfg.url,
+          height: 80,
+          barWidth: 2,
+          barGap: 1,
+          barRadius: 2,
+          cursorColor: '#0085A1'
+        });
+        ws.on('interaction', function() {
+          if (ws.isPlaying()) {
+            ws.pause();
+          } else {
+            ws.seekTo(0);
+            ws.play();
+          }
+        });
+      });
+    </script>
+
+  </body>
+
+</html>
