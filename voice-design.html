@@ -39,6 +39,9 @@
             <li class="nav-item">
               <a class="nav-link" href="tracker.html">Trip Tracker</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="voice-design.html">Voice Design</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -51,8 +54,7 @@
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="post-heading">
               <h1>Voice Design</h1>
-              <span class="subheading">What should something sound like based on emotional or physical characteristics?</span>
-              <span class="meta">By <a href="about.html">Sarah Wilson</a></span>
+              <span class="meta">By <a href="about.html">Sarah Wilson</a> (and Claude)</span>
             </div>
           </div>
         </div>
@@ -66,9 +68,11 @@
           <div class="col-lg-8 col-md-10 mx-auto">
 
             <!-- Intro -->
-            <p class="lead">Describe a character in plain English. Get a voice back.</p>
+            <p><strong>Describe a character in plain English. Get a voice back.</strong></p>
 
-            <p>The code takes a plain-language description — e.g. "stone giant" — and generates a voice. It maps your words to acoustic properties like pitch, breathiness, and texture, drawn from my MSc dissertation which statistically analysed the voices of robots, aliens, and cartoon characters in film. The question it asked: what does fiction think non-human things should sound like? I had the research but not the technical skills to build with it at the time. I've been using Claude Code to further bring it to life.</p>
+            <p>The code takes a description e.g. "stone giant" and generates a voice. It maps your words to acoustic properties like pitch, breathiness, and texture, drawn from my MSc dissertation which statistically analysed the voices of robots and aliens in TV and film.</p>
+
+            <p>10 years ago I didn't have the technical skills to build this but I've been using Claude Code to further bring it to life.</p>
 
             <p>Try the demo (note: it can take a while to load first time) or play the example voices below.</p>
 
@@ -95,27 +99,19 @@
             <!-- Written Examples -->
             <h2 class="section-heading" style="margin-top: 2.5rem;">Some things to try</h2>
 
-            <p>The code works by matching words to acoustic traits — it's not a language model (yet), so it doesn't interpret meaning the way a person would. Descriptions that combine traits pointing in the same direction tend to produce the clearest results.</p>
+            <p>The code works by matching words to acoustic traits — it's not a language model (yet).</p>
 
-            <p><strong>Descriptions that work well</strong> — physical first, then personality, all pulling the same way:</p>
+            <p><strong>Descriptions where the traits agree with each other</strong></p>
 
-            <blockquote class="blockquote">
-              <p>"ancient stone giant" — Deep, slow, rough-textured. Think something that has been around since before plumbing.</p>
-            </blockquote>
-            <blockquote class="blockquote">
-              <p>"warm charismatic digital assistant" — Smooth, measured, and oddly likeable. The voice your smart speaker wishes it had.</p>
-            </blockquote>
-            <blockquote class="blockquote">
-              <p>"young nervous robot" — Higher-pitched and slightly too fast. Definitely overthinking it.</p>
-            </blockquote>
-            <blockquote class="blockquote">
-              <p>"wise ancient creature" — Slow, low, unhurried. This one has seen some things.</p>
-            </blockquote>
-            <blockquote class="blockquote">
-              <p>"angry ghost" — Breathy and volatile. Not ideal for customer service, but atmospheric.</p>
-            </blockquote>
+            <ul>
+              <li><em>"ancient stone giant"</em> — Deep, slow, rough-textured. Think something that has been around since before plumbing.</li>
+              <li><em>"warm charismatic digital assistant"</em> — Smooth, measured, and oddly likeable. The voice your smart speaker wishes it had.</li>
+              <li><em>"young nervous robot"</em> — Higher-pitched and slightly too fast. Definitely overthinking it.</li>
+              <li><em>"wise ancient creature"</em> — Slow, low, unhurried. This one has seen some things.</li>
+              <li><em>"angry ghost"</em> — Breathy and volatile. Not ideal for customer service, but atmospheric.</li>
+            </ul>
 
-            <p><strong>Descriptions that create more ambiguous results</strong> — traits competing over the same parameters. Still interesting, just less predictable:</p>
+            <p><strong>Descriptions that create more ambiguous results</strong></p>
 
             <ul>
               <li><em>"large young"</em> — size pulls pitch down, youth pulls it back up. You'll land somewhere in the middle.</li>
@@ -126,14 +122,28 @@
             <p>Stick to concrete nouns and clear adjectives. Words like <em>stone</em>, <em>metal</em>, <em>ancient</em>, <em>nervous</em>, <em>giant</em> trigger specific acoustic rules. Abstract or literary descriptions ("melancholy Victorian librarian", "the feeling of autumn") won't match anything and will fall back to the default voice. It also doesn't know how specific people sound, so asking for "Morgan Freeman" won't do much.</p>
 
             <!-- Caveats -->
-            <h2 class="section-heading">A few honest caveats</h2>
+            <h2 class="section-heading">A few other caveats</h2>
 
             <ul>
               <li><strong>Cold start:</strong> First generation takes 20–40 seconds while the model loads ~1GB of weights. I haven't paid for the faster compute power.</li>
               <li><strong>Three base voices:</strong> All output starts from one of three preset voices. It isn't generating a base voice from scratch — it is moderating a normal human voice which is male, female, or a slightly more neutral male.</li>
-              <li><strong>Keyword-based:</strong> The app matches known traits. Creative descriptions ("melancholy Victorian librarian") may fall back to defaults. A future version would use an LLM for richer interpretation.</li>
               <li><strong>Non-deterministic:</strong> Bark produces slightly different output each run. It can also add acoustic features you didn't ask for.</li>
             </ul>
+
+            <!-- Research -->
+            <h2 class="section-heading">About the research</h2>
+
+            <p>The acoustic mappings come from my MSc dissertation at the University of Sheffield, which analysed 93 fictional character voices from TV and film. A few things the data showed that weren't obvious going in:</p>
+
+            <ul>
+              <li>Evil characters don't just have lower-pitched voices. Their voices are measurably noisier — higher shimmer, jitter, and harmonic distortion. The chaos is in the signal, not just the frequency.</li>
+              <li>Personality (good, evil, or neutral) could be predicted from acoustic measurements alone with up to 67% accuracy.</li>
+              <li>The acoustic difference between a robot voice and an alien voice is statistically insignificant. They sound more similar than you'd expect.</li>
+            </ul>
+
+            <p>The research was published in the proceedings of the 1st International Workshop on Vocal Interactivity in-and-between Humans, Animals and Robots (2017): <a href="https://vihar-2017.vihar.org/assets/vihar2017_proceedings.pdf" target="_blank" rel="noopener noreferrer">Robot, Alien and Cartoon Voices: Implications for Speech-Enabled Systems</a> (p.42).</p>
+
+            <p class="text-muted text-center" style="margin-top: 2rem;"><small>Python · Bark TTS · WORLD vocoder · Gradio · Hugging Face Spaces</small></p>
 
           </div>
         </div>

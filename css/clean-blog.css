@@ -255,9 +255,10 @@ header.masthead .post-heading .meta a {
 
 .post-preview > a {
   color: #212529;
+  text-decoration: none;
 }
 .post-preview > a:focus, .post-preview > a:hover {
-  text-decoration: none;
+  text-decoration: underline;
   color: #0085A1;
 }
 .post-preview > a > .post-title {
