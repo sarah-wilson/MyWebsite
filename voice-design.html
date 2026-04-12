@@ -13,7 +13,7 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
@@ -105,10 +105,9 @@
 
             <ul>
               <li><em>"ancient stone giant"</em> — Deep, slow, rough-textured. Think something that has been around since before plumbing.</li>
-              <li><em>"warm charismatic digital assistant"</em> — Smooth, measured, and oddly likeable. The voice your smart speaker wishes it had.</li>
+              <li><em>"warm charismatic digital assistant"</em> — Smooth, measured, and oddly likeable.</li>
               <li><em>"young nervous robot"</em> — Higher-pitched and slightly too fast. Definitely overthinking it.</li>
-              <li><em>"wise ancient creature"</em> — Slow, low, unhurried. This one has seen some things.</li>
-              <li><em>"angry ghost"</em> — Breathy and volatile. Not ideal for customer service, but atmospheric.</li>
+<li><em>"angry ghost"</em> — Breathy and volatile. Not ideal for customer service, but atmospheric.</li>
             </ul>
 
             <p><strong>Descriptions that create more ambiguous results</strong></p>
@@ -125,9 +124,10 @@
             <h2 class="section-heading">A few other caveats</h2>
 
             <ul>
-              <li><strong>Cold start:</strong> First generation takes 20–40 seconds while the model loads ~1GB of weights. I haven't paid for the faster compute power.</li>
-              <li><strong>Three base voices:</strong> All output starts from one of three preset voices. It isn't generating a base voice from scratch — it is moderating a normal human voice which is male, female, or a slightly more neutral male.</li>
-              <li><strong>Non-deterministic:</strong> Bark produces slightly different output each run. It can also add acoustic features you didn't ask for.</li>
+              <li><strong>Cold start:</strong> The page itself may take a minute or more to build before you can interact with it. Once live, the first generation takes a further 20–40 seconds while the speech model loads ~1GB of model weights. Subsequent generations are faster. I haven't paid for the faster compute power.</li>
+              <li><strong>Three base voices:</strong> All output starts from one of three presets: male, female, and a more neutral but still male-leaning option. Unless you specify gender, descriptions default to the neutral preset. True gender neutrality is a known challenge of open-source TTS models.</li>
+              <li><strong>Small research sample:</strong> The acoustic mappings come from a data set of 93 characters, which were mostly male so come with weaknesses.</li>
+              <li><strong>Text to audio artefacts:</strong> The model (Bark) produces slightly different output each run and occasionally adds unexpected sounds or trails off mid-sentence.</li>
             </ul>
 
             <!-- Research -->
